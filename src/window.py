@@ -1478,8 +1478,6 @@ class CineWindow(Adw.ApplicationWindow):
 
     def _on_click_pressed(self, gesture, _n_press, x, y, button):
         self.skip_pause_obs_count = 0
-        if self._is_hovering_ui() and button != "MBTN_MID":
-            return
 
         if button != "MBTN_LEFT":
             gesture.set_state(Gtk.EventSequenceState.CLAIMED)
