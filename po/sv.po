@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-15 13:38-0300\n"
-"PO-Revision-Date: 2026-10-16 13:52+0000\n"
+"PO-Revision-Date: 2026-10-18 12:46+0000\n"
 "Last-Translator: Josef Gottlander "
 "<jgottlander@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/cine/app/sv/>\n"
@@ -228,127 +228,127 @@ msgstr "Volymminskning"
 #: src/preferences.blp:278 src/preferences.blp:290 src/window.blp:180
 #: src/window.blp:540
 msgid "Play/Pause"
-msgstr ""
+msgstr "Spela/Pausa"
 
 #: src/shortcuts.py:40
 msgid "Show/Hide Subtitles"
-msgstr ""
+msgstr "Visa/dölj undertexter"
 
 #: src/shortcuts.py:41 src/shortcuts.py:42 src/shortcuts.py:170
 #: src/shortcuts.py:234 src/window.py:785 src/window.blp:244
 msgid "Subtitles"
-msgstr ""
+msgstr "Undertexter"
 
 #: src/shortcuts.py:41
 msgid "Next Subtitle Track"
-msgstr ""
+msgstr "Nästa undertextspår"
 
 #: src/shortcuts.py:42
 msgid "Previous Subtitle Track"
-msgstr ""
+msgstr "Föregående undertextspår"
 
 #: src/shortcuts.py:43 src/shortcuts.py:44
 msgid "Secondary Subtitles"
-msgstr ""
+msgstr "Sekundära undertexter"
 
 #: src/shortcuts.py:43
 msgid "Next Secondary Subtitle Track"
-msgstr ""
+msgstr "Nästa sekundära undertextspår"
 
 #: src/shortcuts.py:44
 msgid "Previous Secondary Subtitle Track"
-msgstr ""
+msgstr "Föregående sekundära undertextspår"
 
 #: src/shortcuts.py:45 src/shortcuts.py:46 src/window.py:790 src/window.blp:259
 msgid "Audio"
-msgstr ""
+msgstr "Ljud"
 
 #: src/shortcuts.py:45
 msgid "Next Audio Track"
-msgstr ""
+msgstr "Nästa ljudspår"
 
 #: src/shortcuts.py:46
 msgid "Previous Audio Track"
-msgstr ""
+msgstr "Föregående ljudspår"
 
 #: src/shortcuts.py:47
 msgid "Seek 10s Backward"
-msgstr ""
+msgstr "Hoppa 10 sekunder bakåt"
 
 #: src/shortcuts.py:48
 msgid "Seek 10s Forward"
-msgstr ""
+msgstr "Hoppa 10 sekunder framåt"
 
 #: src/shortcuts.py:49
 msgid "Seek 5s Backward"
-msgstr ""
+msgstr "Hoppa 5 sekunder bakåt"
 
 #: src/shortcuts.py:50
 msgid "Seek 5s Forward"
-msgstr ""
+msgstr "Hoppa 5 sekunder framåt"
 
 #: src/shortcuts.py:51 src/shortcuts.py:52 src/window.py:1926
 #: src/window.blp:357
 msgid "Fullscreen"
-msgstr ""
+msgstr "Helskärm"
 
 #: src/shortcuts.py:53 src/window.py:1926
 msgid "Exit Fullscreen"
-msgstr ""
+msgstr "Avsluta helskärm"
 
 #: src/shortcuts.py:62 src/shortcuts.py:63 src/shortcuts.py:64
 #: src/options.blp:285 src/options.blp:311
 msgid "Zoom"
-msgstr ""
+msgstr "Zoom"
 
 #: src/shortcuts.py:62 src/shortcuts.py:63
 msgid "Zoom In"
-msgstr ""
+msgstr "Zooma in"
 
 #: src/shortcuts.py:64
 msgid "Zoom Out"
-msgstr ""
+msgstr "Zooma ut"
 
 #: src/shortcuts.py:67 src/shortcuts.py:68 src/options.blp:623
 #: src/options.blp:649
 msgid "Subtitle Delay"
-msgstr ""
+msgstr "Undertextfördröjning"
 
 #: src/shortcuts.py:67
 msgid "Decrease Subtitle Delay"
-msgstr ""
+msgstr "Minska fördröjning av undertexter"
 
 #: src/shortcuts.py:68
 msgid "Increase Subtitle Delay"
-msgstr ""
+msgstr "Öka fördröjning för undertexter"
 
 #: src/shortcuts.py:69 src/shortcuts.py:70
 msgid "Subtitle Position"
-msgstr ""
+msgstr "Undertextplacering"
 
 #: src/shortcuts.py:69
 msgid "Move Subtitles Up"
-msgstr ""
+msgstr "Flytta undertexter uppåt"
 
 #: src/shortcuts.py:70
 msgid "Move Subtitles Down"
-msgstr ""
+msgstr "Flytta undertexter nedåt"
 
 #: src/shortcuts.py:71 src/shortcuts.py:72 src/preferences.blp:244
 msgid "Subtitle Scale"
-msgstr ""
+msgstr "Undertextskala"
 
 #: src/shortcuts.py:71
 msgid "Increase Subtitle Scale"
-msgstr ""
+msgstr "Öka skala för undertexter"
 
 #: src/shortcuts.py:72
 msgid "Decrease Subtitle Scale"
-msgstr ""
+msgstr "Minska skala för undertexter"
 
 #: src/shortcuts.py:73 src/window.blp:212
 msgid "Mute/Unmute"
-msgstr ""
+msgstr "Ljud av/på"
 
 #: src/shortcuts.py:74 src/shortcuts.py:75 src/shortcuts.py:76
 #: src/options.blp:680 src/options.blp:706
