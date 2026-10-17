@@ -237,12 +237,12 @@ scale marks mark indicator {
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.33);
 }
 scale marks.top mark {
-  margin-top: 2px;
+  margin-top: 3px;
   margin-bottom: -1px;
 }
 scale marks.bottom mark {
   margin-top: -1px;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 scale > trough > slider {
   border-radius: 100%;
