@@ -94,14 +94,22 @@ template $CineWindow: Adw.ApplicationWindow {
                 always-show-arrow: true;
 
                 menu-model: menu {
-                  item (_("Open Files"), "win.clear-and-add")
-                  item (_("Open Folder"), "win.open-folder")
-                  item (_("Open URL"), "win.open-url")
-                  item (_("Add Files"), "win.add-playlist-files")
-                  item (_("Add Folder"), "win.add-playlist-folder")
-                  item (_("Add URL"), "win.add-url")
-                  item (_("Add Subtitle Track"), "win.add-sub-tracks")
-                  item (_("Add Audio Track"), "win.add-audio-tracks")
+                  section {
+                    item (_("Open Files"), "win.clear-and-add")
+                    item (_("Open Folder"), "win.open-folder")
+                    item (_("Open URL"), "win.open-url")
+                  }
+
+                  section {
+                    item (_("Add Files"), "win.add-playlist-files")
+                    item (_("Add Folder"), "win.add-playlist-folder")
+                    item (_("Add URL"), "win.add-url")
+                  }
+
+                  section {
+                    item (_("Add Subtitle Track"), "win.add-sub-tracks")
+                    item (_("Add Audio Track"), "win.add-audio-tracks")
+                  }
 
                   section {
                     item (_("Watch History"), "win.open-history")
