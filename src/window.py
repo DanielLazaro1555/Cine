@@ -468,6 +468,11 @@ class CineWindow(Adw.ApplicationWindow):
         long_press.connect("cancelled", self._cancel_click_hold)
         self.window_handle.add_controller(long_press)
 
+        for c in self.window_handle.observe_controllers():
+            if isinstance(c, Gtk.GestureClick):
+                c.set_propagation_phase(Gtk.PropagationPhase.NONE)
+                c.set_button(9)
+
         @self._connect("notify::visible-dialog")
         def on_vis_dialog_change(*args):
             if dialog := self.get_visible_dialog():
@@ -1475,9 +1480,6 @@ class CineWindow(Adw.ApplicationWindow):
     def _on_click_pressed(self, gesture, _n_press, x, y, button):
         self.skip_pause_obs_count = 0
 
-        if button != "MBTN_LEFT":
-            gesture.set_state(Gtk.EventSequenceState.CLAIMED)
-
         if button == "MBTN_LEFT":
             self._left_clk = settings.get_int("left-click")
         elif button == "MBTN_RIGHT":
@@ -1511,7 +1513,6 @@ class CineWindow(Adw.ApplicationWindow):
             new_speed = self._prev_speed * 2
             self.mpv.speed = new_speed
             self.mpv.show_text(f"{new_speed:g}× ⯈⯈", "100000000")
-            gesture.set_state(Gtk.EventSequenceState.CLAIMED)
         except mpv.ShutdownError:
             pass
 
@@ -1524,7 +1525,6 @@ class CineWindow(Adw.ApplicationWindow):
             logger.exception("_run_command failed")
 
     def _on_click_released(self, gesture, n_press, _x, _y, button):
-        gesture.set_state(Gtk.EventSequenceState.CLAIMED)
         ignored_btn = button in ("MBTN_BACK", "MBTN_FORWARD")
         ignore_left = (
             self._is_inactive
