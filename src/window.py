@@ -515,7 +515,7 @@ class CineWindow(Adw.ApplicationWindow):
 
         @self._connect("notify::maximized")
         def on_maximized_change(*args):
-            settings.set_boolean("is-maximized", self.is_maximized())
+            settings.set_boolean("is-maximized", self.props.maximized)
 
         self.connect("notify::fullscreened", self._set_fs_state)
 
