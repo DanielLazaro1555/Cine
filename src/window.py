@@ -34,7 +34,7 @@ gi.require_version("Gdk", "4.0")
 gi.require_version("GLib", "2.0")
 gi.require_version("Gtk", "4.0")
 gi.require_version("GObject", "2.0")
-from gi.repository import Adw, Gdk, Gio, GLib, GObject, Gtk
+from gi.repository import Adw, Gdk, Gio, GLib, Gtk
 
 from .history import HistoryDialog
 from .mpris import MPRIS
@@ -491,7 +491,7 @@ class CineWindow(Adw.ApplicationWindow):
                 self._is_inactive = True
 
         drop_target = Gtk.DropTarget.new(Gdk.FileList, Gdk.DragAction.COPY)
-        drop_target.set_gtypes([Gdk.FileList, GObject.TYPE_STRING])
+        drop_target.set_gtypes([Gdk.FileList, str])
         drop_target.connect("enter", self._on_drop_enter)
         drop_target.connect("leave", self._on_drop_leave)
         drop_target.connect("drop", self._on_drop)
