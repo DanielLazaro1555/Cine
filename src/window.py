@@ -74,8 +74,6 @@ logger = logging.getLogger(__name__)
 
 gtk_setts: Gtk.Settings | None = Gtk.Settings.get_default()
 
-DEFAULT_WIDTH, DEFAULT_HEIGHT = 1120, 630
-
 
 @Gtk.Template(resource_path="/io/github/diegopvlk/Cine/window.ui")
 class CineWindow(Adw.ApplicationWindow):
@@ -230,7 +228,7 @@ class CineWindow(Adw.ApplicationWindow):
         )
 
         self._video_area = VideoGLArea(self.mpv)
-        self.offload: Gtk.GraphicsOffload = Gtk.GraphicsOffload(child=self._video_area)
+        self.offload = Gtk.GraphicsOffload(child=self._video_area)
         self.offload.set_black_background(True)
         self.video_overlay.set_child(self.offload)
 
@@ -339,8 +337,6 @@ class CineWindow(Adw.ApplicationWindow):
         history_dialog.present(self)
 
     def _setup_widgets(self):
-        self.set_default_size(DEFAULT_WIDTH, DEFAULT_HEIGHT)
-
         for widget in [
             self.controls_wrap_box,
             self.volume_box,
@@ -1638,28 +1634,6 @@ class CineWindow(Adw.ApplicationWindow):
         separator_hover = self.motion_controls_separator.props.contains_pointer
         hovering = (controls_hover or header_hover) and not separator_hover
         return hovering
-
-    def set_window_size(self, width, height):
-        if width <= 0 or height <= 0:
-            return
-
-        aspect_ratio = width / height
-        base_size = DEFAULT_HEIGHT
-
-        if aspect_ratio < 1:
-            new_h = int(base_size / aspect_ratio)
-            new_w = base_size
-        else:
-            new_w = int(base_size * aspect_ratio)
-            new_h = base_size
-
-        MAX_W, MAX_H = 1280, 720
-        if new_w > MAX_W or new_h > MAX_H:
-            scale = min(MAX_W / new_w, MAX_H / new_h)
-            new_w = int(new_w * scale)
-            new_h = int(new_h * scale)
-
-        self.set_default_size(new_w, new_h)
 
     def _sync_inhibit(self):
         try:

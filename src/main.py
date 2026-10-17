@@ -35,6 +35,7 @@ from gi.repository import Adw, Gio, GLib, Gtk
 from .mpris import MPRIS
 from .preferences import Preferences, settings
 from .save_session import is_same_playlist
+from .utils import set_window_size
 from .window import CineWindow
 
 logger = logging.getLogger(__name__)
@@ -76,16 +77,22 @@ class CineApplication(Adw.Application):
         self._create_action("quit", lambda *a: self.quit(), ["<primary>q"])
         self._create_action("about", self._on_about_action)
         self._create_action(
-            "preferences", self.on_preferences_action, ["<primary>comma"]
+            "preferences", self._on_preferences_action, ["<primary>comma"]
         )
 
     def do_activate(self):
         win = CineWindow(application=self, is_activate=True)
-        win.present()
+        self._set_size_and_present(win)
+
+    def _set_size_and_present(self, window, width=1920, height=1080):
+        window.realize()
+        set_window_size(window, width, height)
+        window.present()
 
     def do_open(self, files, n_files, hint):
         win: CineWindow = cast(CineWindow, self.props.active_window)
         open_new = settings.get_boolean("open-new-windows") or not win
+        vid_w, vid_h = 1920, 1080
 
         if open_new:
             win = CineWindow(application=self)
@@ -93,7 +100,7 @@ class CineApplication(Adw.Application):
 
             first_video_path = None
             for gfile in files:
-                first_video_path = self.find_first_file(gfile)
+                first_video_path = self._find_first_file(gfile)
 
                 if first_video_path:
                     break
@@ -130,18 +137,17 @@ class CineApplication(Adw.Application):
                             rotation = 0
 
                         if abs(rotation) in (90, 270):
-                            w = height
-                            h = width
+                            vid_w = height
+                            vid_h = width
                         else:
-                            w = width
-                            h = height
-
-                        win.set_window_size(w, h)
+                            vid_w = width
+                            vid_h = height
                 except Exception:
                     logger.exception("Metadata probe failed")
-            win.present()
-        else:
-            win.present()
+
+        self._set_size_and_present(win, vid_w, vid_h)
+
+        if not open_new:
             if is_same_playlist(win.mpv.playlist):
                 win.mpv.write_watch_later_config()
             win.mpv.stop()
@@ -158,7 +164,7 @@ class CineApplication(Adw.Application):
 
         win.hide_ui_timeout()
 
-    def find_first_file(self, gfile, visited=None):
+    def _find_first_file(self, gfile, visited=None):
         """Local-only recursive search."""
         if gfile.get_uri_scheme() != "file":
             return None
@@ -201,7 +207,7 @@ class CineApplication(Adw.Application):
                         subdirectories.append(gfile.get_child(name))
 
                 for folder in subdirectories:
-                    found = self.find_first_file(folder, visited)
+                    found = self._find_first_file(folder, visited)
                     if found:
                         return found
         except Exception:
@@ -222,7 +228,7 @@ class CineApplication(Adw.Application):
 
         return -1
 
-    def on_preferences_action(self, *args):
+    def _on_preferences_action(self, *args):
         """Callback for the app.preferences action."""
         preferences = Preferences(self.props.active_window)
         preferences.present(self.props.active_window)
