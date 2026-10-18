@@ -460,7 +460,7 @@ class CineWindow(Adw.ApplicationWindow):
             click_gesture = Gtk.GestureClick(button=btn_num)
             click_gesture.connect("pressed", self._on_click_pressed, MBTN)
             click_gesture.connect("released", self._on_click_released, MBTN)
-            self.video_overlay.add_controller(click_gesture)
+            self.toast_overlay.add_controller(click_gesture)
 
         long_press = Gtk.GestureLongPress.new()
         long_press.connect("pressed", self._on_click_hold)
