@@ -312,7 +312,7 @@ msgstr "Perkecil"
 #: src/shortcuts.py:67 src/shortcuts.py:68 src/options.blp:623
 #: src/options.blp:649
 msgid "Subtitle Delay"
-msgstr "Punduran Subtitel"
+msgstr "Penundaan Subtitel"
 
 #: src/shortcuts.py:67
 msgid "Decrease Subtitle Delay"
