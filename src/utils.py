@@ -190,21 +190,38 @@ def get_display_param():
     return param
 
 
+def _get_fallback_w_h(width, height):
+    aspect_ratio = width / height
+    base_size = 1120
+
+    if aspect_ratio < 1:
+        new_h = int(base_size / aspect_ratio)
+        new_w = base_size
+    else:
+        new_w = int(base_size * aspect_ratio)
+        new_h = base_size
+
+    max_w, max_h = 1280, 720
+    if new_w > max_w or new_h > max_h:
+        scale = min(max_w / new_w, max_h / new_h)
+        new_w = int(new_w * scale)
+        new_h = int(new_h * scale)
+
+    return new_w, new_h
+
+
 def _get_window_w_h(window, width, height):
     # Code mostly copied from showtime/loupe:
     # https://gitlab.gnome.org/GNOME/showtime/-/blob/25066ad0ca1c20bd8b9f6f776f5be75b31277039/showtime/widgets/window.py#L467-500
     # https://gitlab.gnome.org/GNOME/loupe/-/blob/4ca5f9e03d18667db5d72325597cebc02887777a/src/widgets/image/rendering.rs#L151
 
-    fallback_w = 1120
-    fallback_h = 630
-
     if not (surface := window.get_surface()):
         logger.error("Could not get GdkSurface to set window size")
-        return fallback_w, fallback_h
+        return _get_fallback_w_h(width, height)
 
     if not (monitor := window.props.display.get_monitor_at_surface(surface)):
         logger.error("Could not get GdkMonitor to set window size")
-        return fallback_w, fallback_h
+        return _get_fallback_w_h(width, height)
 
     hidpi_scale = surface.props.scale_factor
     monitor_rect = monitor.props.geometry
