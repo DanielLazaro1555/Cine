@@ -326,7 +326,7 @@ class CineWindow(Adw.ApplicationWindow):
             "/io/github/diegopvlk/Cine/shortcuts-dialog.ui"
         )
         self.shortcuts_dialog = cast(
-            Adw.ShortcutsDialog,  # pyright: ignore[reportAttributeAccessIssue]
+            Adw.ShortcutsDialog,
             builder.get_object("shortcuts_dialog"),
         )
         populate_shortcuts_dialog_mpv(self.shortcuts_dialog, self._input_bindings)
