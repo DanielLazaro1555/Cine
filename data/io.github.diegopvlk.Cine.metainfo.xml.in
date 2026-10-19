@@ -72,6 +72,17 @@
   </requires>
 
   <releases>
+    <release version="1.8.7" date="2026-10-20">
+      <description translate="no">
+        <ul>
+          <li>Improved startup performance</li>
+          <li>Increased initial window size based on screen size</li>
+          <li>Fixed mouse click actions not working sometimes</li>
+          <li>Added Burmese translation</li>
+          <li>Added Indonesian translation</li>
+        </ul>
+      </description>
+    </release>
     <release version="1.8.6" date="2026-09-24">
       <description translate="no">
         <ul>
