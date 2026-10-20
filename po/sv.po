@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-15 13:38-0300\n"
-"PO-Revision-Date: 2026-10-18 12:46+0000\n"
+"PO-Revision-Date: 2026-10-20 21:04+0000\n"
 "Last-Translator: Josef Gottlander "
 "<jgottlander@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/cine/app/sv/>\n"
@@ -353,43 +353,43 @@ msgstr "Ljud av/på"
 #: src/shortcuts.py:74 src/shortcuts.py:75 src/shortcuts.py:76
 #: src/options.blp:680 src/options.blp:706
 msgid "Audio Delay"
-msgstr ""
+msgstr "Ljudfördröjning"
 
 #: src/shortcuts.py:74
 msgid "Decrease Audio Delay"
-msgstr ""
+msgstr "Minska ljudfördröjning"
 
 #: src/shortcuts.py:75 src/shortcuts.py:76
 msgid "Increase Audio Delay"
-msgstr ""
+msgstr "Öka ljudfördröjning"
 
 #: src/shortcuts.py:77
 msgid "Go Back One Frame"
-msgstr ""
+msgstr "Gå bakåt en bildruta"
 
 #: src/shortcuts.py:78
 msgid "Advance One Frame"
-msgstr ""
+msgstr "Gå fram en bildruta"
 
 #: src/shortcuts.py:79
 msgid "Seek to the Previous Chapter"
-msgstr ""
+msgstr "Hoppa till föregående kapitel"
 
 #: src/shortcuts.py:80
 msgid "Seek to the Next Chapter"
-msgstr ""
+msgstr "Hoppa till nästa kapitel"
 
 #: src/shortcuts.py:81
 msgid "Take Screenshot With Subtitles"
-msgstr ""
+msgstr "Ta skärmbild med undertexter"
 
 #: src/shortcuts.py:82
 msgid "Take Screenshot Without Subtitles"
-msgstr ""
+msgstr "Ta skärmbild utan undertexter"
 
 #: src/shortcuts.py:83
 msgid "Statistics"
-msgstr ""
+msgstr "Statistik"
 
 #: src/shortcuts.py:84
 msgid "Statistics Overlay"
