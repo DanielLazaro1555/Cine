@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: io.github.diegopvlk.Cine\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-08-15 13:38-0300\n"
-"PO-Revision-Date: 2026-10-20 21:04+0000\n"
+"PO-Revision-Date: 2026-10-23 05:42+0000\n"
 "Last-Translator: Josef Gottlander "
 "<jgottlander@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/cine/app/sv/>\n"
@@ -393,108 +393,108 @@ msgstr "Statistik"
 
 #: src/shortcuts.py:84
 msgid "Statistics Overlay"
-msgstr ""
+msgstr "Statistiköverlägg"
 
 #: src/shortcuts.py:85 src/window.blp:318
 msgid "Set/Clear A-B Loop Points"
-msgstr ""
+msgstr "Sätt/Rensa A-B-slingpunkter"
 
 #: src/shortcuts.py:86 src/window.py:1282 src/window.blp:330
 msgid "Loop"
-msgstr ""
+msgstr "Slinga"
 
 #: src/shortcuts.py:86 src/window.py:1279
 msgid "Loop File"
-msgstr ""
+msgstr "Spela filen i slinga"
 
 #: src/shortcuts.py:87 src/shortcuts.py:88 src/options.blp:342
 #: src/options.blp:367
 msgid "Contrast"
-msgstr ""
+msgstr "Kontrast"
 
 #: src/shortcuts.py:87
 msgid "Decrease Contrast"
-msgstr ""
+msgstr "Minska kontrasten"
 
 #: src/shortcuts.py:88
 msgid "Increase Contrast"
-msgstr ""
+msgstr "Öka kontrasten"
 
 #: src/shortcuts.py:89 src/shortcuts.py:90 src/options.blp:398
 #: src/options.blp:423
 msgid "Brightness"
-msgstr ""
+msgstr "Ljusstyrka"
 
 #: src/shortcuts.py:89
 msgid "Decrease Brightness"
-msgstr ""
+msgstr "Minska ljusstyrkan"
 
 #: src/shortcuts.py:90
 msgid "Increase Brightness"
-msgstr ""
+msgstr "Öka ljusstyrkan"
 
 #: src/shortcuts.py:91 src/shortcuts.py:92 src/options.blp:454
 #: src/options.blp:479
 msgid "Gamma"
-msgstr ""
+msgstr "Gamma"
 
 #: src/shortcuts.py:91
 msgid "Decrease Gamma"
-msgstr ""
+msgstr "Minska gamma"
 
 #: src/shortcuts.py:92
 msgid "Increase Gamma"
-msgstr ""
+msgstr "Öka gamma"
 
 #: src/shortcuts.py:93 src/shortcuts.py:94 src/options.blp:510
 #: src/options.blp:535
 msgid "Saturation"
-msgstr ""
+msgstr "Mättnad"
 
 #: src/shortcuts.py:93
 msgid "Decrease Saturation"
-msgstr ""
+msgstr "Minska mättnaden"
 
 #: src/shortcuts.py:94
 msgid "Increase Saturation"
-msgstr ""
+msgstr "Öka mättnaden"
 
 #: src/shortcuts.py:95 src/shortcuts.py:96 src/shortcuts.py:97
 msgid "Speed"
-msgstr ""
+msgstr "Hastighet"
 
 #: src/shortcuts.py:95
 msgid "Decrease Playback Speed"
-msgstr ""
+msgstr "Minska uppspelningshastigheten"
 
 #: src/shortcuts.py:96
 msgid "Increase Playback Speed"
-msgstr ""
+msgstr "Öka uppspelningshastigheten"
 
 #: src/shortcuts.py:97 src/options.blp:727
 msgid "Reset Playback Speed"
-msgstr ""
+msgstr "Återställ uppspelningshastighet"
 
 #: src/shortcuts.py:154 src/shortcuts.py:237
 msgid "Display & Video"
-msgstr ""
+msgstr "Bild och video"
 
 #: src/shortcuts.py:171 src/shortcuts.py:235
 msgid "Audio & Volume"
-msgstr ""
+msgstr "Ljud och volym"
 
 #: src/shortcuts.py:172 src/shortcuts.py:236
 msgid "Navigation"
-msgstr ""
+msgstr "Navigering"
 
 #: src/shortcuts.py:173 src/shortcuts.py:238
 msgid "Playback"
-msgstr ""
+msgstr "Uppspelning"
 
 #: src/shortcuts.py:177 src/shortcuts.py:183 src/shortcuts.py:239
 #: src/shortcuts.py:243
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Diverse"
 
 #: src/window.py:640 src/window.blp:104
 msgid "Add Subtitle Track"
